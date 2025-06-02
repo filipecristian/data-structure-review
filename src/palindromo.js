@@ -1,16 +1,18 @@
 function isPalindromo(text) {
     let i = 0;
+    let controlI = Math.floor(text.length / 2) - 1;
+
     let j = text.length - 1;
-    // n atan
-    while (i < j) {
-        
+    let controlJ = Math.floor(text.length / 2);
+
+    while (i <= controlI && j >= controlJ) {
         if (text[i] == ' ') {
             i++;
             continue;
         }
 
         if (text[j] == ' ') {
-            j++;
+            j--;
             continue;
         }
 
@@ -19,7 +21,7 @@ function isPalindromo(text) {
         i++;
         j--;
     }
-
+    
     return true;
 }
 
