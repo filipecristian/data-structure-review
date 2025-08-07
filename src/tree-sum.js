@@ -21,16 +21,18 @@ function sumTree(node = null) {
     let total = 0;
     
     if (node != null) {
-        console.log(node.val);
+        total += node.val;
     }
 
-    if (node.right !== null) {
-        sumTree(node.right);
+    if (node.right != null) {
+        total += sumTree(node.right);
     }
 
-    if (node.left !== null) {
-        sumTree(node.left);
+    if (node.left != null) {
+        total += sumTree(node.left);
     }
+
+    return total;
 }
 
 module.exports = { TreeNode, sumTree };
