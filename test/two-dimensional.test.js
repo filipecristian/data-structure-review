@@ -76,5 +76,4 @@ describe('test two-demensional array', () => {
     it.each(provider())('test: %s', (name, matrix, matrixExpected) => {
             expect(JSON.stringify(service.fall(matrix))).toEqual(JSON.stringify(matrixExpected));
      });
-
 });
